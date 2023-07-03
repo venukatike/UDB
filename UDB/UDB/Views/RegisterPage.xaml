@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UDB.Views.RegisterPage" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Image Source="UDB_Logo2"/>
+            <Frame BackgroundColor="LightGray" CornerRadius="25" Margin="20,0,20,0">
+                <StackLayout>
+                    <Entry Text="{Binding FirstName}" Placeholder="FirstName" x:Name="UserFirstName"/>
+                    <Entry Text="{Binding LastName}" Placeholder="LastName" x:Name="UserLastName"/>
+                    <Entry Text="{Binding DateOfBirth}" Placeholder="DateOfBirth" x:Name="Dofb"/>
+                    <Entry Text="{Binding Gender}" Placeholder="Gender" x:Name="Gender"/>
+                    <Entry Text="{Binding Address}" Placeholder="Address" x:Name="address"/>
+                    <Entry Text="{Binding Email}" Placeholder="Email" x:Name="mail"/>
+                    <Entry Text="{Binding Password}" Placeholder="Password" x:Name="password"/>
+                    <Entry Text="{Binding ConfirmPassword}" Placeholder="Confirm Password" x:Name="confirmpassword"/>
+                    </StackLayout>
+            </Frame>
+                <StackLayout Margin="0,0,0,15">
+                    <Button Text="Register" CornerRadius="50" Margin="40,30,40,0" BackgroundColor="Blue" TextColor="White" Opacity="0.6" Clicked="btn1"/>
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span>Already have an Account</Span>
+                            <Span TextDecorations="Underline" Text=" Login" TextColor="Blue">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

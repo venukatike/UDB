@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UDB.Views.LoginPage" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="UDB_Logo"/>
+                <Frame BackgroundColor="LightGray" CornerRadius="25" Margin="20,0,20,0">
+                    <StackLayout>
+                        <Entry Text="{Binding UserName}" Placeholder="UserName" x:Name="UserName"/>
+                        <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" x:Name="UPassword"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout Margin="0,0,0,15">
+                    <Button Text="Login" CornerRadius="50" Margin="40,30,40,0" BackgroundColor="Blue" TextColor="White" Opacity="0.6" Clicked="Button_Clicked"/>
+                    <Label HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>If you haven't an Account</Span>
+                                <Span TextDecorations="Underline" Text=" Register" TextColor="Blue">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1"></TapGestureRecognizer>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

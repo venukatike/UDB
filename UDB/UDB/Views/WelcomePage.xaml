@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UDB.Views.WelcomePage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="LightGray">
+                <Grid>
+
+                    <StackLayout Grid.Column="0" Grid.Row="0" >
+
+                        <Label Text="Welcome To Universal Digital Bank UDB" FontSize="32" HorizontalTextAlignment="Center" TextColor="Gray" FontAttributes="Bold" 
+                           Margin="20,30,0,0"/>
+                        <!--"{OnPlatform iOS='34', Android='30'}"-->
+
+
+
+                        <Image Grid.Row="0" Grid.Column="0" Source="WelcomePage_img" Aspect="Fill" HeightRequest="420"  Margin="26,0,0,0"/>
+                        <!--"{OnPlatform iOS='550', Android='450'}"-->
+                    </StackLayout>
+                </Grid>
+                <StackLayout>
+                    <Button Text="Get Started" FontSize="{OnPlatform iOS='20', Android='15'}" 
+                    FontAttributes="Bold" BackgroundColor="#62b000" 
+                    CornerRadius="20" TextColor="White" 
+                    HeightRequest="{OnPlatform iOS='70', Android='50'}" Margin="20,0,20,2" 
+                    VerticalOptions="End" Clicked="Button_Clicked"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Made &#x2764; with India" HorizontalTextAlignment="Center"/>
+                    <Label Text="developed by &#64;Venu Katike&#174;" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
